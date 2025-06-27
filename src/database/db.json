@@ -1,0 +1,22 @@
+{"tickets":[
+    {
+    "id":"5930d026-8b80-40be-8116-10c27a6e38af",
+    "equipament":"Computador",
+    "description":"Computador não liga",
+    "user_name":"Rayssa Silva",
+    "status":"open",
+    "create_at":"2025-06-27T14:18:50.206Z",
+    "updated_at":"2025-06-27T14:18:50.206Z"
+},
+    
+    {
+        "id":"ee957af8-3755-406e-b435-01ddb618d5ff",
+        "equipament":"Teclado",
+        "description":"teclado quebrado",
+        "user_name":"joão pedro",
+        "status":"open",
+        "create_at":"2025-06-27T14:33:11.608Z",
+        "updated_at":"2025-06-27T14:33:11.608Z"
+        }
+    ]
+ }

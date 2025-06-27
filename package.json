@@ -1,0 +1,13 @@
+{
+  "name": "apitest",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch src/server.js"
+  },
+  "author": "Rayssa Silva",
+  "license": "MIT",
+  "description": "API de gerenciamento de tickets de suport"
+}
