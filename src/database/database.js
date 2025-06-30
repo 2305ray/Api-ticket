@@ -36,7 +36,7 @@ export class Database {
 
         if (filters) {
             data = data.filter((row) => {
-              return Object.entries(filters).some(([key, value]) => {//o entrie separa a chave e o valor
+                return Object.entries(filters).some(([key, value]) => {//o entrie separa a chave e o valor
                     return row[key].toLowerCase().includes(value.toLowerCase())
                 })
 
@@ -44,5 +44,29 @@ export class Database {
         }
 
         return data
+    }
+
+    update(table, id, data) {
+        const rowIndex = this.#database[table].findIndex((row) =>
+            row.id === id)
+
+        if (rowIndex > -1) {
+            this.#database[table][rowIndex] = {
+                ...this.#database[table][rowIndex],
+                ...data //  vai sobrescrever o anterior
+            }
+            this.#persist() //salvar a modificação no arquivo
+
+        }
+    }
+
+    delete(table, id) {
+        const rowIndex = this.#database[table].findIndex((row) =>
+            row.id === id)
+
+        if (rowIndex > -1) {
+            this.#database[table].splice(rowIndex, 1)
+            this.#persist()
+        }
     }
 }
